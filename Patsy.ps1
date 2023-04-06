@@ -247,6 +247,12 @@ function Remove-PTASpy {
     }
 }
 
+# Write-Output "Searching for indicators that target env is using ADConnect.."
+# Get-AdUser -Filter * -Properties * | Where {$_.DisplayName -like 'MSOL*'} 
+# Get-AdUser -Filter * -Properties * | Where {$_.DisplayName -like 'ADSync*'}
+# Get-AdUser -Filter * -Properties * | Where {$_.DisplayName -like 'AZUREADSSO*'} 
+# Read-Host "Press Enter to continue.." 
+
 
 Start-WinRMService
 Write-Output "Adding $ServerName to Trusted Hosts.."
